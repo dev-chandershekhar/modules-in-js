@@ -81,3 +81,11 @@ console.log(stateDeepClone);
 if(module.hot) {
   module.hot.accept();
 }
+
+Promise.resolve('Test').then(x=> console.log(x));
+
+import 'core-js/stable';
+
+// Polifilling async function
+
+import 'regenerator-runtime/runtime';
