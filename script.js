@@ -34,23 +34,46 @@
 
 // console.log(lastPost2);
 
-const shoppingCart = (function() {
-  const cart = [];
-  const productQuantity = 10;
+// const shoppingCart = (function() {
+//   const cart = [];
+//   const productQuantity = 10;
 
-  const addToCart = function (product, quantity) {
-    cart.push({ product, quantity });
-    console.log(`${quantity} ${product} added into cart`);
-  };
+//   const addToCart = function (product, quantity) {
+//     cart.push({ product, quantity });
+//     console.log(`${quantity} ${product} added into cart`);
+//   };
 
-  return {
-    cart, productQuantity, addToCart
-  }
-})();
+//   return {
+//     cart, productQuantity, addToCart
+//   }
+// })();
 
-shoppingCart.addToCart('Bread', 5);
-shoppingCart.addToCart('Glass', 2);
+// shoppingCart.addToCart('Bread', 5);
+// shoppingCart.addToCart('Glass', 2);
 
-const orders = shoppingCart.cart;
+// const orders = shoppingCart.cart;
 
-console.log(shoppingCart);
+// console.log(shoppingCart);
+
+import { set } from 'lodash-es';
+import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+
+const state = {
+  cart: [
+    {product: 'Bread', quantity: 5},
+    {product: 'Burger', quantity: 6},
+  ],
+  user: {loggedIn: true},
+}
+
+const stateClone = Object.assign({}, state);
+
+console.log(stateClone);
+
+state.user.loggedIn = false;
+
+console.log(stateClone);
+
+const stateDeepClone = cloneDeep(state);
+
+console.log(stateDeepClone);

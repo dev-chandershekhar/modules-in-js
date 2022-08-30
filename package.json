@@ -1,0 +1,24 @@
+{
+  "name": "modern-js-modules-tooling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "clean.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-chandershekhar/modules-in-js.git"
+  },
+  "author": "Chander Shekhar  ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-chandershekhar/modules-in-js/issues"
+  },
+  "homepage": "https://github.com/dev-chandershekhar/modules-in-js#readme",
+  "dependencies": {
+    "leaflet": "^1.8.0",
+    "live-server": "^1.1.0",
+    "lodash-es": "^4.17.21"
+  }
+}
