@@ -1,15 +1,15 @@
-// import './shoppingCart.js';
-// import {addToCart} from './shoppingCart.js';
+import './shoppingCart.js';
+import {addToCart} from './shoppingCart.js';
 
 // console.log('Importing Module');
 
 // addToCart('Egg', 5)
 
-// import *  as productCart  from './shoppingCart.js';
+import *  as productCart  from './shoppingCart.js';
 
-// productCart.addToCart('Pencil', 5);
-// productCart.addToCart('Bag', 3);
-// productCart.addToCart('Copy', 20);
+productCart.addToCart('Pencil', 5);
+productCart.addToCart('Bag', 3);
+productCart.addToCart('Copy', 20);
 
 // console.log(productCart.productQuantity);
 
@@ -55,8 +55,8 @@
 
 // console.log(shoppingCart);
 
-import { set } from 'lodash-es';
-import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+// import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+import cloneDeep from 'lodash-es';
 
 const state = {
   cart: [
@@ -77,3 +77,7 @@ console.log(stateClone);
 const stateDeepClone = cloneDeep(state);
 
 console.log(stateDeepClone);
+
+if(module.hot) {
+  module.hot.accept();
+}
